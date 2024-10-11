@@ -4,9 +4,11 @@ import ServiceCard from '../components/serviceCard';
 import TechCard from '../components/techCard';
 import ProcessCard from '../components/processCard';
 import EngagementCard from '../components/engagementCard';
+import ProjectCard from '../components/projectCard';
 
 export default function MiddleSection() {
     const [techStacks, setTechStacks] = useState(0)
+    const [projectIndex, setProjectIndex] = useState(0)
 
     const services = [
         {
@@ -265,7 +267,135 @@ export default function MiddleSection() {
         }
     ]
 
+    const projects = [
+        
+        {
+            techType: 'All',
+            techStack: [
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/help-you-thumb-img.webp',
+                    projectTitle: 'Help You',
+                    href: 'https://softsourcetech.com/iphone-mobile-app-development/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/chatnow-thumb-img.webp',
+                    projectTitle: 'Chat Now',
+                    href: 'https://softsourcetech.com/wp-content/uploads/2023/12/tech-logo-02.png.webp'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/click-n-book-thumb-img.webp',
+                    projectTitle: 'Click N Book',
+                    href: 'https://softsourcetech.com/react-native-app-development/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/click-n-learn-thumb-img.webp',
+                    projectTitle: 'Click N Learn',
+                    href: 'https://softsourcetech.com/flutter-app-development/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/02/cryptoxchange-thumb-img.webp',
+                    projectTitle: 'CryptoXchange',
+                    href: 'https://softsourcetech.com/ionic-development/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/dateme-thumb-img01.webp',
+                    projectTitle: 'Date Me',
+                    href: 'https://softsourcetech.com/swift-app-development/'
+                },
+                
+            ],
 
+        },
+        {
+            techType: 'Web',
+            techStack: [
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/click-n-learn-thumb-img.webp',
+                    projectTitle: 'Click N Learn',
+                    href: 'https://softsourcetech.com/iphone-mobile-app-development/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/02/cryptoxchange-thumb-img.webp',
+                    projectTitle: 'CryptoXchange',
+                    href: 'https://softsourcetech.com/wp-content/uploads/2023/12/tech-logo-02.png.webp'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/dateme-thumb-img01.webp',
+                    projectTitle: 'Date Me',
+                    href: 'https://softsourcetech.com/react-native-app-development/'
+                },
+               
+            ],
+
+        },
+        {
+            techType: 'Mobile',
+            techStack: [
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/help-you-thumb-img.webp',
+                    projectTitle: 'Help You',
+                    href: 'https://softsourcetech.com/reactjs-development-company/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/chatnow-thumb-img.webp',
+                    projectTitle: 'Chat Now',
+                    href: 'https://softsourcetech.com/angularjs-development-company/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/click-n-book-thumb-img.webp',
+                    projectTitle: 'Click N Book',
+                    href: 'https://softsourcetech.com/html-development-company/'
+                },
+             
+            ]
+
+        },
+        {
+            techType: 'Ecommerce',
+            techStack: [
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/chirco-thumb-img.webp',
+                    projectTitle: 'Chirco',
+                    href: 'https://softsourcetech.com/magento-ecommerce-development/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/christianmovies-thumb-img.webp',
+                    projectTitle: 'Christianmovies',
+                    href: 'https://softsourcetech.com/shopify-ecommerce-development/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/extechbuilding-thumb-img.webp',
+                    projectTitle: 'Extech Building',
+                    href: 'https://softsourcetech.com/nopcommerce-web-development/'
+                },
+              
+            ]
+
+        },
+        {
+            techType: 'Games',
+            techStack: [
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/casino-club-thumb-img.webp',
+                    projectTitle: 'Casino Club',
+                    href: 'https://softsourcetech.com/mongodb-development-company/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/my3patti-thumb-img.webp',
+                    projectTitle: 'My3 Patti',
+                    href: 'https://softsourcetech.com/mysql-development-company/'
+                },
+                {
+                    projectImg: 'https://softsourcetech.com/wp-content/uploads/2024/01/mydomino-thumb-img.webp',
+                    projectTitle: 'My Domino',
+                    href: 'https://softsourcetech.com/mysql-development-company/'
+                },
+
+            ]
+
+        },
+  
+    ]
 
     return (
         <div>
@@ -376,13 +506,35 @@ export default function MiddleSection() {
 
                     </div>
 
-                    <div className='flex flex-wrap gap-8  justify-center lg:max-h-[70vh] lg:overflow-scroll max-w-[80%] items-center'>
+                    <div className='flex flex-wrap gap-8  justify-center max-w-[80%] items-center'>
                         {engagementData.map((data, index) => (
                             <EngagementCard imgSrc={data.imgSrc} title={data.title} para={data.para} key={index} />
                         ))}
                     </div>
                 </section>
             </div>
+            <div className='flex justify-center items-center w-full bg-[#fafafa]'>
+            <section className='px-4 py-6 flex flex-col text-center items-center  max-w-[1200px]'>
+                <h2 className='text-[#0fa3c8] text-[22px] font-bold'>Our Recent Work</h2>
+                <div className='h-[1px] w-[85px] bg-black  my-3'></div>
+                <p className='text-[15px] text-[#252B33] pb-[10px]'>Our Proudful Delivery of Remarkable Projects</p>
+                <div className='flex flex-wrap gap-4 items-center justify-center my-6'>
+                    {projects.map((project, index) => (
+                        <h3 className={`cursor-pointer ${projectIndex === index && 'border-b-[1px] border-[#0fa3c8] text-[#0fa3c8]'} font-semibold`} onClick={() => setProjectIndex(index)}>{project.techType}</h3>
+                        // <TechCard imgSrc={tech.imgSrc} title={service.title} para={service.para} key={index} /> 
+
+                    ))}
+
+
+                </div>
+                <div className='flex flex-wrap items-center justify-center gap-8 mt-4'>
+                    {projects[projectIndex].techStack.map((project, index) => (
+                        <ProjectCard imgSrc={project.projectImg} title={project.projectTitle} key={index} />
+                    ))}
+                </div>
+            </section>
+            </div>
+          
         </div>
     )
 }
