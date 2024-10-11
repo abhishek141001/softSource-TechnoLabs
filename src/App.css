@@ -1,0 +1,70 @@
+
+*{
+  margin:0;
+  padding:0
+}
+
+@keyframes move-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.move-logos {
+  display: flex;
+  width: max-content;
+  animation: move-horizontal 20s linear infinite;
+}
+
+.logos-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceCard{
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  border-bottom: 1px solid #046a83;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+
+.serviceCardArrow{
+  position: absolute;
+  bottom: -20px;
+  border: 1px solid #046a83;
+  z-index: 1;
+  background-color: #fff;
+  
+  
+
+}
+
+.techCard{
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+}
+.processCard{
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+
+  position: relative;
+  
+}
+.processCardborderEl{
+  border-radius: 55% 0 25% 0%;
+  align-self: end;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+}
+
+.section-1{
+ 
+}
+.section-process{
+  background-image: url('https://softsourcetech.com/wp-content/themes/softsourcetech/library/images/development-pr-bg.webp');
+  background-position: center;
+  background-attachment: fixed;
+}
