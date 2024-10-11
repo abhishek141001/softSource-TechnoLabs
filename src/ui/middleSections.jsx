@@ -339,7 +339,7 @@ export default function MiddleSection() {
                         <img src='https://softsourcetech.com/wp-content/uploads/2024/08/133719.webp' className='max-w-full mt-[5px]' />
                     </div>
 
-                    <div className='flex flex-wrap gap-8  justify-center max-h-[70vh] overflow-scroll'>
+                    <div className='flex flex-wrap gap-8  justify-center max-h-[70vh] lg:overflow-scroll'>
                         {processes.map((process, index) => (
                             <ProcessCard imgSrc={process.imgSrc} title={process.title} para={process.para} key={index} />
                         ))}
