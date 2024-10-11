@@ -272,31 +272,31 @@ export default function MiddleSection() {
                 </section>
             </div>
             <div className='flex items-center justify-center'>
-            <section className='px-4 py-6 text-center max-w-[1200px]'>
-                <h2 className='text-[22px] text-[#0fa3c8] leading-[30px] font-semibold lg:text-[36px] lg:leading-[48px] lg:font-medium'>We've helped businesses increase their revenue on an average by 85% in their first year with us!</h2>
-                <div className='flex gap-4 items-center justify-center mt-12'>
-                    <div>
-                        <div className='text-5xl font-bold' >
-                        <CountUp end={110} /><span>+</span>
+                <section className='px-4 py-6 text-center max-w-[1200px]'>
+                    <h2 className='text-[22px] text-[#0fa3c8] leading-[30px] font-semibold lg:text-[36px] lg:leading-[48px] lg:font-medium'>We've helped businesses increase their revenue on an average by 85% in their first year with us!</h2>
+                    <div className='flex gap-4 items-center justify-center mt-12'>
+                        <div>
+                            <div className='text-5xl font-bold' >
+                                <CountUp end={110} /><span>+</span>
+                            </div>
+
+                            <p className='text-[13px]'>Satisfied Clients Across the Globe</p>
                         </div>
-                        
-                        <p className='text-[13px]'>Satisfied Clients Across the Globe</p>
-                    </div>
-                    <div>
-                    <div className='text-5xl font-bold' >
-                        <CountUp end={110} /><span>+</span>
-                        
+                        <div>
+                            <div className='text-5xl font-bold' >
+                                <CountUp end={110} /><span>+</span>
+
+                            </div>
+                            <p className='text-[13px]'>Satisfied Clients Across the Globe</p>
                         </div>
-                        <p className='text-[13px]'>Satisfied Clients Across the Globe</p>
-                    </div>
-                    <div>
-                    <div className='text-5xl font-bold' >
-                        <CountUp end={110} /><span>+</span>
+                        <div>
+                            <div className='text-5xl font-bold' >
+                                <CountUp end={110} /><span>+</span>
+                            </div>
+                            <p className='text-[13px]'>Satisfied Clients Across the Globe</p>
                         </div>
-                        <p className='text-[13px]'>Satisfied Clients Across the Globe</p>
                     </div>
-                </div>
-            </section>
+                </section>
             </div>
             <div className='w-full flex items-center justify-center bg-[#fafafa]'>
                 <section className='px-4 py-6 flex flex-col text-center items-center  max-w-[1200px]'>
@@ -331,7 +331,7 @@ export default function MiddleSection() {
                 </div>
             </section>
             <div className='bg-[#fafafa] flex justify-center section-process'>
-                <section className='px-4 py-6 flex flex-col lg:flex-row text-center lg:text-left lg:py-20  max-w-[1200px]'>
+                <section className='px-4 py-6 flex flex-col lg:flex-row text-center items-center lg:text-left lg:py-20  max-w-[1200px] gap-8'>
                     <div className='lg:w-[50%] lg:sticky top-20'>
                         <h2 className='text-[#0fa3c8] text-[22px] font-bold lg:text-[36px] lg:leading-[48px]'>Our Development Process</h2>
                         <div className='h-[1px] w-[85px] bg-black  my-3'></div>
@@ -339,7 +339,7 @@ export default function MiddleSection() {
                         <img src='https://softsourcetech.com/wp-content/uploads/2024/08/133719.webp' className='max-w-full mt-[5px]' />
                     </div>
 
-                    <div className='flex flex-wrap gap-8  justify-center max-h-[70vh] lg:overflow-scroll'>
+                    <div className='flex flex-wrap gap-8  justify-center max-h-[70vh] lg:overflow-scroll max-w-[80%] items-center'>
                         {processes.map((process, index) => (
                             <ProcessCard imgSrc={process.imgSrc} title={process.title} para={process.para} key={index} />
                         ))}
