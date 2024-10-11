@@ -68,3 +68,17 @@
   background-position: center;
   background-attachment: fixed;
 }
+
+.engagementCard{
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+.engagementCardborderEl{
+  border-radius: 0% 25% 0% 25%;
+  align-self: start;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+ 
+}

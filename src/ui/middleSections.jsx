@@ -3,6 +3,7 @@ import CountUp from 'react-countup';
 import ServiceCard from '../components/serviceCard';
 import TechCard from '../components/techCard';
 import ProcessCard from '../components/processCard';
+import EngagementCard from '../components/engagementCard';
 
 export default function MiddleSection() {
     const [techStacks, setTechStacks] = useState(0)
@@ -246,6 +247,24 @@ export default function MiddleSection() {
 
     ]
 
+    const engagementData = [
+        {
+            imgSrc: 'https://softsourcetech.com/wp-content/uploads/2024/01/models-icon01.webp',
+            title: 'Fix Price Model',
+            para: `In this model, the project scope of work with its associated cost and timeline is predefined before the development takes place. It is a preferred model for longer periods of engagement. Clients always remain assured of the project cost & time frame as agreed. This model suits for a crystal clear project with regards to scope & timeframe. Term “ Fixed” is associated with a “Fix Budget” and “Fix Scope” with No additional cost. `
+        },
+        {
+            imgSrc: 'https://softsourcetech.com/wp-content/uploads/2024/01/models-icon02.webp',
+            title: 'Hire Dedicated Model',
+            para: `This is a very classic and simple way of engagement wherein clients pay for the number of hours the app developer works on a project. Clients easily start the project as they don't have to walk in with detailed specifications. Dedicated developer model is a cost-effective way for companies to hire full or part-time IT professionals for websites, mobile apps, or software development. ideal for businesses seeking professionals It teams to effectively utilise time. `
+        },
+        {
+            imgSrc: 'https://softsourcetech.com/wp-content/uploads/2024/01/models-icon03.webp',
+            title: 'Time & Material Model',
+            para: `This Model is more preferred for the short term project & maintenance types of projects in which you pay for “the time invested” meaning pay for the hours used in specific assignments or projects. Time and Material hiring model offers flexibility, cost saving, access to expertise, scalability & time-saving for projects with dynamic requirements. Ideal for businesses needing future modifications into their systems. `
+        }
+    ]
+
 
 
     return (
@@ -339,9 +358,27 @@ export default function MiddleSection() {
                         <img src='https://softsourcetech.com/wp-content/uploads/2024/08/133719.webp' className='max-w-full mt-[5px]' />
                     </div>
 
-                    <div className='flex flex-wrap gap-8  justify-center max-h-[70vh] lg:overflow-scroll max-w-[80%] items-center'>
+                    <div className='flex flex-wrap gap-8  justify-center lg:max-h-[70vh] lg:overflow-scroll max-w-[80%] items-center'>
                         {processes.map((process, index) => (
                             <ProcessCard imgSrc={process.imgSrc} title={process.title} para={process.para} key={index} />
+                        ))}
+                    </div>
+                </section>
+            </div>
+            <div className='bg-[#fafafa] flex justify-center '>
+                <section className='px-4 py-6 flex flex-col text-center items-center  lg:py-20  max-w-[1200px] gap-8'>
+                    <div className='flex flex-col items-center'>
+                        <h2 className='text-[#0fa3c8] text-[22px] font-bold lg:text-[36px] lg:leading-[48px]'>Engagement Models</h2>
+                        <div className='h-[1px] w-[85px] bg-black  my-3'></div>
+                        <p className='text-[15px] text-[#252B33] pb-[10px]'>
+
+                            We don’t lock our clients in contract, check our easy engagement models as per your requirement.</p>
+
+                    </div>
+
+                    <div className='flex flex-wrap gap-8  justify-center lg:max-h-[70vh] lg:overflow-scroll max-w-[80%] items-center'>
+                        {engagementData.map((data, index) => (
+                            <EngagementCard imgSrc={data.imgSrc} title={data.title} para={data.para} key={index} />
                         ))}
                     </div>
                 </section>
